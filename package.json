@@ -1,0 +1,26 @@
+{
+  "name": "socialmedia",
+  "version": "1.0.0",
+  "description": "social media app with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "socialMedia"
+  },
+  "author": "maciej",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.2",
+    "multer": "^1.4.2",
+    "socketio": "^1.0.0",
+    "util": "^0.12.3"
+  }
+}
