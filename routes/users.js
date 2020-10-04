@@ -36,7 +36,8 @@ router.post('/avatarupdate/:id', upload, (req, res, next) => {
   })
   .catch( (err) => res.status(400).json('Error ' + err))
 })
-/*router.delete('/avatardelete/:id', (req, res, next) => {
+
+router.delete('/avatardelete/:id', (req, res, next) => {
   User.findById(req.params.id)
     .then( user => {
       const oldAvatar = user.avatar;
@@ -44,12 +45,14 @@ router.post('/avatarupdate/:id', upload, (req, res, next) => {
       user.save()
       .then( () => {
         res.send('deleted');
-        unlinkAsync(`./socialmedia/src/uploads/${oldAvatar}`);
+        if(oldAvatar !== 'none.png') {
+          unlinkAsync(`./socialmedia/src/uploads/${oldAvatar}`);
+        }
       })
       .catch( err =>  res.status(400).json(err))
     })
     .catch( err => res.status(400).json(err))
-})*/
+})
 
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
